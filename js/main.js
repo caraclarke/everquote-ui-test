@@ -31,10 +31,10 @@ $(document).ready(function() {
 
     for (var i = 0; i < leagueRank.length; i++) {
       if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
-        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + 'pts</li>');
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + ' pts</li>');
       } else {
         previousRank++;
-        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + 'pts</li>');
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + ' pts</li>');
       }
     }
 
