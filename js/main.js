@@ -14,20 +14,30 @@ $(document).ready(function() {
     var playerName = leagueInput[0].trim();
     var playerScore = parseInt(leagueInput[1].trim());
 
-    leagueRank.push([playerName, playerScore]);
+    var nameIncluded = false;
+
+    for (var i = 0; i < leagueRank.length; i++) {
+      if (playerName == leagueRank[i][0]) {
+        leagueRank[i][1] += playerScore;
+        nameIncluded = true;
+      }
+    }
+
+    if (!nameIncluded){
+      leagueRank.push([playerName, playerScore]);
+    }
+
     leagueRank.sort(playerOrder)
 
-      for (var i = 0; i < leagueRank.length; i++) {
-        // debugger;
-        if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
-          $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
-        } else {
-          previousRank++;
-          $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
-        }
+    for (var i = 0; i < leagueRank.length; i++) {
+      if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
+      } else {
+        previousRank++;
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
       }
+    }
     } // end printOrder
-
 
   $('#add').on('click', function() {
     printOrder(leagueRank);
