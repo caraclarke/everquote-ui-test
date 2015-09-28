@@ -9,14 +9,16 @@ $(document).ready(function() {
 
   var printOrder = function(arr) {
     $('#rankings').html('');
+    var previousRank = 1;
     leagueInput = $('#nameInput').val().split(',');
     var playerName = leagueInput[0].trim();
     var playerScore = parseInt(leagueInput[1].trim());
 
     leagueRank.push([playerName, playerScore]);
+    leagueRank.sort(playerOrder)
 
-      var previousRank = 1;
       for (var i = 0; i < leagueRank.length; i++) {
+        // debugger;
         if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
           $('#rankings').append('<li>' + previousRank + '. ' + arr[i] + '</li>');
         } else {
@@ -27,7 +29,7 @@ $(document).ready(function() {
     } // end printOrder
 
   $('#add').on('click', function() {
-    printOrder(leagueRank.sort(playerOrder));
+    printOrder(leagueRank);
     $('#nameInput').val('');
   }); // end onclick
 
