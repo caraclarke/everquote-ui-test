@@ -23,9 +23,8 @@ $(document).ready(function() {
     var playerName = leagueInput[0].trim();
     var playerScore = parseInt(leagueInput[1].trim());
 
-    leagueRank.push([playerName, playerScore]);
-    console.log(leagueRank.sort(playerOrder));
-    printOrder(leagueRank);
+    var sorted = leagueRank.push([playerName, playerScore]);
+    printOrder(leagueRank.sort(playerOrder));
     $('#nameInput').val('');
   });
 
