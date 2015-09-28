@@ -31,22 +31,23 @@ $(document).ready(function() {
 
     for (var i = 0; i < leagueRank.length; i++) {
       if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
-        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + 'pts</li>');
       } else {
         previousRank++;
-        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + '</li>');
+        $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + 'pts</li>');
       }
     }
-    } // end printOrder
 
-  $('#add').on('click', function() {
-    printOrder(leagueRank);
-    $('#nameInput').val('');
+  } // end printOrder
+
+    $('#add').on('click', function() {
+      printOrder(leagueRank);
+      $('#nameInput').val('');
   }); // end add onclick
 
-  $('#clear').on('click', function() {
-    $('#rankings').html('');
-    leagueRank = [];
+    $('#clear').on('click', function() {
+      $('#rankings').html('');
+      leagueRank = [];
   }); // end clear onclick
 
 }); // end document ready
