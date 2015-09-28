@@ -33,7 +33,7 @@ $(document).ready(function() {
       if (leagueRank[i - 1] && leagueRank[i - 1][1] == leagueRank[i][1]) {
         $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + ' pts</li>');
       } else {
-        previousRank++;
+        previousRank = i + 1;
         $('#rankings').append('<li>' + previousRank + '. ' + arr[i][0] + ', ' + arr[i][1] + ' pts</li>');
       }
     }
