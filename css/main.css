@@ -1,8 +1,19 @@
 body {
-  min-height: 1350px;
-  padding-top: 200px;
+  min-height: 750px;
+  padding-top: 300px;
   background: #2B2B2B;
   color: #F6F6F6;
+}
+
+h1 {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+}
+
+p {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 /* navbar */
@@ -16,6 +27,7 @@ body {
 }
 
 .navbar {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   color: #2B2B2B;
   text-align: center;
   font-size: x-large;
@@ -23,11 +35,19 @@ body {
 
 .navbar .fa {
   color: #DE1B1B;
+  font-size: 100px;
+}
+
+.navbar h1 {
+  text-transform: uppercase;
+  text-shadow: 2px 2px #E9E581;
+  font-size: 75px;
+  margin: 0;
 }
 
 .navbar p {
   text-align: center;
-  font-size: medium;
+  font-size: small;
   padding-bottom: 5px;
   border-bottom: 3px solid #DE1B1B;
   text-decoration: none;
@@ -56,6 +76,8 @@ body {
 
 li {
   display: block;
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 25px;
 }
 
 /* bootstrap button default override */
@@ -94,6 +116,5 @@ li {
 }
 
 .btn-primary.outline {
-  /*border: 2px solid #F6F6F6;*/
   color: #F6F6F6;
 }
