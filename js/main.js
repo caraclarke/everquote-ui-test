@@ -7,6 +7,8 @@ $(document).ready(function() {
     return b[1] - a[1];
   } // end playerOrder
 
+  // regex check letters, numbers, not eqal to not a number, not an empty string
+
   var printOrder = function(arr) {
     $('#rankings').html('');
     var previousRank = 0;

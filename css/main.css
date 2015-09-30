@@ -1,3 +1,25 @@
+body {
+  min-height: 2000px;
+  padding-top: 200px;
+}
+
 li {
   display: block;
+}
+
+.navbar .nav,
+.navbar .nav > li {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navbar {
+  text-align: center;
+  font-size: x-large;
+}
+
+.navbar p {
+  text-align: center;
+  font-size: medium;
 }
