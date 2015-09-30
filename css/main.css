@@ -1,7 +1,7 @@
 body {
   min-height: 1350px;
   padding-top: 200px;
-  background-color: #2B2B2B;
+  background: #2B2B2B;
   color: #F6F6F6;
 }
 
@@ -12,7 +12,7 @@ body {
   float: none;
   display: inline-block;
   vertical-align: top;
-  background-color: #F6F6F6;
+  background: #F6F6F6;
 }
 
 .navbar {
@@ -40,12 +40,11 @@ body {
 }
 
 .left-column input {
-  margin-right: 10px;
   color: #2B2B2B;
 }
 
 .left-column button {
-  margin-right: 10px;
+  margin-right: 5px;
   color: #2B2B2B;
 }
 
@@ -57,4 +56,44 @@ body {
 
 li {
   display: block;
+}
+
+/* bootstrap button default override */
+
+.btn {
+  padding: 5px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+
+.btn-primary {
+  background: #606364;
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #606364;
+}
+
+.btn-primary:active, .btn-primary.active {
+  background: #606364;
+  box-shadow: none;
+}
+
+/* outline button specific */
+
+.btn.outline {
+  background: #606364;
+  padding: 10px;
+}
+
+.btn-primary.outline {
+  /*border: 2px solid #F6F6F6;*/
+  color: #F6F6F6;
 }
