@@ -18,14 +18,18 @@
     </nav>
 
     <div class="container">
-      <h1>Rankings</h1>
-      <p>Please enter input in format 'Name, Score'</p>
-      <input type="text" id="nameInput">
-      <br><br>
-      <button id="add">Add To Rankings</button>
+      <div class="col-md-6 pull-left left-column">
+        <h1>Rankings</h1>
+        <p>Please enter input in format 'Name, Score'</p>
+        <input type="text" size="35" id="nameInput">
+        <br><br>
+        <button id="add">Add To Rankings</button>
+        <button id="clear">Clear Rankings</button>
+      </div>
 
-      <ul id="rankings"></ul>
-      <button id="clear">Clear Rankings</button>
+      <div class="col-md-6 pull-right">
+        <ul id="rankings"></ul>
+      </div>
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

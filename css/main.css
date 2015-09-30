@@ -1,25 +1,60 @@
 body {
-  min-height: 2000px;
+  min-height: 1350px;
   padding-top: 200px;
+  background-color: #2B2B2B;
+  color: #F6F6F6;
 }
 
-li {
-  display: block;
-}
+/* navbar */
 
 .navbar .nav,
 .navbar .nav > li {
   float: none;
   display: inline-block;
   vertical-align: top;
+  background-color: #F6F6F6;
 }
 
 .navbar {
+  color: #2B2B2B;
   text-align: center;
   font-size: x-large;
+}
+
+.navbar .fa {
+  color: #DE1B1B;
 }
 
 .navbar p {
   text-align: center;
   font-size: medium;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #DE1B1B;
+  text-decoration: none;
+}
+
+/* left column */
+
+.left-column {
+  text-align: center;
+}
+
+.left-column input {
+  margin-right: 10px;
+  color: #2B2B2B;
+}
+
+.left-column button {
+  margin-right: 10px;
+  color: #2B2B2B;
+}
+
+/* right column */
+
+#rankings {
+  margin-top: 50px;
+}
+
+li {
+  display: block;
 }
